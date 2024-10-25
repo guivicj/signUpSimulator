@@ -28,6 +28,12 @@ public class HelloController {
     private SplitMenuButton countries;
 
     @FXML
+    private MenuItem country1;
+
+    @FXML
+    private MenuItem country2;
+
+    @FXML
     private CheckBox termsOK;
 
     @FXML
@@ -69,10 +75,15 @@ public class HelloController {
         lblDataSent.setText("You have registered successfully");
     }
 
+    @FXML
+    protected void selectedCountrySpain() {
+        selectedCountry = country1.getText();
+        countries.setText(selectedCountry);
+    }
 
-    public void selectCountriesOnAction(javafx.event.ActionEvent event) {
-        MenuItem item = (MenuItem) event.getSource();
-        selectedCountry = item.getText();
+    @FXML
+    protected void selectedCountryPortugal() {
+        selectedCountry = country2.getText();
         countries.setText(selectedCountry);
     }
 }

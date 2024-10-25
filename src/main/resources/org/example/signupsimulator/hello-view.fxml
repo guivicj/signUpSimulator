@@ -15,95 +15,101 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.signupsimulator.HelloController">
-   <children>
-      <TabPane fx:id="tabPane" layoutX="47.0" layoutY="32.0" prefHeight="400.0" prefWidth="407.0" style="-fx-border-style: solid;" tabClosingPolicy="UNAVAILABLE">
-        <tabs>
-          <Tab text="Bienvenida">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Text layoutX="75.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the App!" wrappingWidth="237.13671875">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Text>
-                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="128.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@736543-200.png" />
-                           </image>
-                        </ImageView>
-                        <Button fx:id="btnSignUp" layoutX="150.0" layoutY="255.0" mnemonicParsing="false" onAction="#btnSignUpOnAction" text="Sign Up">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Button>
-                     </children></AnchorPane>
-            </content>
-          </Tab>
-          <Tab fx:id="tabDate" text="Datos">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <TextField fx:id="txtUsername" alignment="CENTER" layoutX="53.0" layoutY="41.0" prefHeight="43.0" prefWidth="300.0" promptText="Name">
-                           <font>
-                              <Font size="14.0" />
-                           </font></TextField>
-                        <TextField fx:id="txtEmail" alignment="CENTER" layoutX="53.0" layoutY="107.0" prefHeight="43.0" prefWidth="300.0" promptText="Email">
-                           <font>
-                              <Font size="14.0" />
-                           </font></TextField>
-                        <TextField fx:id="txtTelephone" alignment="CENTER" layoutX="53.0" layoutY="171.0" prefHeight="43.0" prefWidth="300.0" promptText="Telephone Number">
-                           <font>
-                              <Font size="14.0" />
-                           </font></TextField>
-                        <Button fx:id="btnValidateData" layoutX="158.0" layoutY="316.0" mnemonicParsing="false" onAction="#btnValidateOnAction" text="Validate">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Button>
-                        <SplitMenuButton fx:id="countries" alignment="TOP_CENTER" layoutX="53.0" layoutY="237.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="298.0" text="Countries" textAlignment="CENTER">
-                          <items>
-                            <MenuItem mnemonicParsing="false" onAction="#selectCountriesOnAction" text="España" />
-                            <MenuItem mnemonicParsing="false" onAction="#selectCountriesOnAction" text="Portugal" />
-                          </items>
-                        </SplitMenuButton>
-                        <CheckBox fx:id="termsOK" layoutX="175.0" layoutY="288.0" mnemonicParsing="false" text="Terms" />
-                     </children></AnchorPane>
-            </content>
-          </Tab>
-            <Tab text="Validación">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Button fx:id="btnSendData" layoutX="171.0" layoutY="297.0" mnemonicParsing="false" onAction="#btnSendDataOnAction" text="Send">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Button>
-                        <Label layoutX="153.0" layoutY="74.0" prefHeight="38.0" prefWidth="100.0" text="Check your data" textAlignment="CENTER" wrapText="true" />
-                        <Label fx:id="lblData" layoutX="189.0" layoutY="152.0" />
-                     </children>
-                  </AnchorPane>
-               </content>
-            </Tab>
-            <Tab text="Registro Completado">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="128.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@736543-200.png" />
-                           </image>
-                        </ImageView>
-                        <Label fx:id="lblDataSent" alignment="CENTER" layoutX="53.0" layoutY="240.0" prefHeight="27.0" prefWidth="299.0">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                     </children></AnchorPane>
-               </content>
-            </Tab>
-        </tabs>
-      </TabPane>
-   </children>
+    <children>
+        <TabPane fx:id="tabPane" layoutX="47.0" layoutY="32.0" prefHeight="400.0" prefWidth="407.0" style="-fx-border-style: solid;" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Bienvenida">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Text layoutX="75.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the App!" wrappingWidth="237.13671875">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Text>
+                                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="128.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@736543-200.png" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="btnSignUp" layoutX="150.0" layoutY="255.0" mnemonicParsing="false" onAction="#btnSignUpOnAction" text="Sign Up">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="tabDate" text="Datos">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TextField fx:id="txtUsername" alignment="CENTER" layoutX="53.0" layoutY="41.0" prefHeight="43.0" prefWidth="300.0" promptText="Name">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </TextField>
+                                <TextField fx:id="txtEmail" alignment="CENTER" layoutX="53.0" layoutY="107.0" prefHeight="43.0" prefWidth="300.0" promptText="Email">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </TextField>
+                                <TextField fx:id="txtTelephone" alignment="CENTER" layoutX="53.0" layoutY="171.0" prefHeight="43.0" prefWidth="300.0" promptText="Telephone Number">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </TextField>
+                                <Button fx:id="btnValidateData" layoutX="158.0" layoutY="316.0" mnemonicParsing="false" onAction="#btnValidateOnAction" text="Validate">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Button>
+                                <SplitMenuButton fx:id="countries" alignment="TOP_CENTER" layoutX="53.0" layoutY="237.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="298.0" text="Countries" textAlignment="CENTER">
+                                    <items>
+                                        <MenuItem fx:id="country1" mnemonicParsing="false" onAction="#selectedCountrySpain" text="España" />
+                                        <MenuItem fx:id="country2" mnemonicParsing="false" onAction="#selectedCountryPortugal" text="Portugal" />
+                                    </items>
+                                </SplitMenuButton>
+                                <CheckBox fx:id="termsOK" layoutX="175.0" layoutY="288.0" mnemonicParsing="false" text="Terms" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Validación">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Button fx:id="btnSendData" layoutX="171.0" layoutY="297.0" mnemonicParsing="false" onAction="#btnSendDataOnAction" text="Send">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Button>
+                                <Label layoutX="153.0" layoutY="74.0" prefHeight="38.0" prefWidth="100.0" text="Check your data" textAlignment="CENTER" wrapText="true" />
+                                <Label fx:id="lblData" layoutX="189.0" layoutY="152.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Registro Completado">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="128.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@736543-200.png" />
+                                    </image>
+                                </ImageView>
+                                <Label fx:id="lblDataSent" alignment="CENTER" layoutX="53.0" layoutY="240.0" prefHeight="27.0" prefWidth="299.0">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
 </AnchorPane>
